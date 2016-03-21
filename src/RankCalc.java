@@ -55,7 +55,7 @@ public class RankCalc
         {
             k = 20;
         }
-        else if (playergamesINT >= 30)
+        else if (playergamesINT >= 15)
         {
             k = 25;
         }

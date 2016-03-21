@@ -17,6 +17,7 @@ public class ReadAndPick
 {
     public static List<String> nameList;
     public List<Integer> rankingList;
+    public List<Integer> amountofTournamentsList;
     private JFileChooser fChooser;
     private int ranking2;
     public Gui gui;
@@ -26,6 +27,7 @@ public class ReadAndPick
     {
         nameList = new ArrayList();
         rankingList = new ArrayList();
+        amountofTournamentsList = new ArrayList();
         fChooser = new JFileChooser();
         ranking2 = fChooser.showOpenDialog(null);
     }
@@ -56,11 +58,11 @@ public class ReadAndPick
             nameList.add(name);
             int ranking = file.nextInt();
             rankingList.add(ranking);
-            System.out.print(nameList + " ");
-            System.out.println(rankingList);
+            int tournAmounts = file.nextInt();
+            amountofTournamentsList.add(tournAmounts);
+            System.out.println(" ranking "+ ranking);
+            System.out.println(" Y "+ amountofTournamentsList);
         }
-        System.out.print(nameList + " ");
-        System.out.println(rankingList);
     }
 
     public void writeFile(List<String> nameList, List<Integer> rankingList) throws FileNotFoundException, UnsupportedEncodingException
